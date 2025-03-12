@@ -15,6 +15,11 @@ jobs:
           repository: dy102/Post
           token: ${{ secrets.TOKEN }}
 
+      - name: set User info
+        run: |
+          git config --global user.name ${{ secrets.USER_NAME }}
+          git config --global user.email ${{ secrets.USER_EMAIL }}
+
       - name: Commit changes to forked repository
         run: |
           git clone https://${{ secrets.USER_NAME }}:${{ secrets.TOKEN }}@${{ secrets.URL }}
