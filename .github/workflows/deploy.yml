@@ -22,7 +22,7 @@ jobs:
 
       - name: Commit changes to forked repository
         run: |
-          git clone https://github.com/${{ secrets.USERNAME }}:${{ secrets.TOKEN }}/dy102.github.io.git
+          git clone https://github.com/${{ secrets.USERNAME }}:${{ secrets.TOKEN }}/${{ secrets.URL }}
           cd dy102.github.io
           cp -r /home/runner/work/Post/Post/posts/JPA/ ./_posts/
           git add ./_posts/
