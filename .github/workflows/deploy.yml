@@ -20,6 +20,6 @@ jobs:
           git clone https://github.com/dy102/dy102.github.io.git
           cd dy102.github.io
           cp -r /home/runner/work/Post/Post/posts/JPA/ ./_posts/
-          git add /home/runner/work/Post/Post/posts/JPA/
+          git add ./_posts/
           git commit -m "push new post"
           git push origin main
