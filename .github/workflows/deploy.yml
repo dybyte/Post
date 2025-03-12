@@ -1,0 +1,25 @@
+name: Sync md file to forked repository
+
+on:
+  push:
+    branches:
+      - main  # 새 레포지토리에서의 작업을 트리거로 설정
+
+jobs:
+  sync:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout new repository
+        uses: actions/checkout@v2
+        with:
+          repository: dy102/Post
+          token: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Commit changes to forked repository
+        run: |
+          git clone https://github.com/dy102/dy102.github.io.git
+          cd dy102.github.io
+           cp -r ../Post/posts/JPA/ ./_posts/
+          git add file.md
+          git commit -m "push new post"
+          git push origin main
