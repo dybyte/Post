@@ -27,4 +27,4 @@ jobs:
           cp -r /home/runner/work/Post/Post/posts/JPA/ ./_posts/
           git add ./_posts/
           git commit -m "push new post"
-          git push origin main
+          git push origin master
