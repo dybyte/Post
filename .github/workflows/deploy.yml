@@ -24,7 +24,7 @@ jobs:
         run: |
           git clone https://${{ secrets.USER_NAME }}:${{ secrets.TOKEN }}@${{ secrets.URL }}
           cd dy102.github.io
-          cp -r /home/runner/work/Post/Post/posts/Spring/ ./_posts/
+          cp -r /home/runner/work/Post/Post/posts/OS/ ./_posts/
           git add ./_posts/
           git commit -m "push new post"
           git push origin master
